@@ -3,6 +3,7 @@ import random
 import sys
 import pygame
 from pygame.locals import *
+from pygame import mixer
 from time import sleep
 from turtle import *
 from lets_test import Hello
@@ -20,7 +21,11 @@ framesPerSecond = 32
 pipeImage = "Images/pipe.png"
 backgroundImage = "Images/background.jpg"
 birdPlayerImage = "Images/bird.png"
-seaLevelImage = "Images/base.jfif"
+seaLevelImage = "Images/base.png"
+mixer.init()
+mixer.music.load("song.mp3")
+mixer.music.set_volume(0.7)
+mixer.music.play()
 
 pygame.display.update()
 
